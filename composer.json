@@ -1,0 +1,28 @@
+{
+    "name": "package1",
+    "description": "Personal Project",
+    "homepage": "http://framework.zend.com/",
+    "license": "BSD-3-Clause",
+    "authors": [{
+        "name": "Abdullah Omar Siraj",
+        "email": "siraj.zafl@gmail.com"
+    }],
+    "time": "2017-03-08",
+    "keywords": [
+        "sample-project"
+    ],
+    "autoload": {
+        "classmap": [
+            "Module.php"
+        ]
+    },
+    "require": {
+    },
+    "repositories": [],
+    "require-dev": {
+        "zendframework/zendframework": "<3.0.0",
+        "phpunit/phpunit": "5.*.*",
+        "mockery/mockery": "dev-master",
+        "phpunit/php-code-coverage": "^4.0"
+    }
+}

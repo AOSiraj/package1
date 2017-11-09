@@ -1,0 +1,9 @@
+package1Test\Service\AuthenticationService
+ [x] If token is correct
+
+package1Test\Service\HttpRequestService
+ [x] Can get acces token
+
+AnswerResponseService
+ [x] Is able to insert
+

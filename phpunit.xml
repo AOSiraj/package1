@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit codecoverage="true" bootstrap="./tests/Bootstrap.php" colors="true">
+    <php>
+        <env name="APPLICATION_ENV" value="local"/>
+    </php>
+    <testsuites>
+        <testsuite name="package1Test">
+            <directory>./tests</directory>
+            <!--<exclude>./tests/package1Test/Model/ModelBaseTest.php</exclude>-->
+            <!--<exclude>./tests/package1Test/Service/ServiceBaseTest.php</exclude>-->
+            <!--<exclude>./tests/package1Test/Service/*</exclude>-->
+            <exclude>./tests/package1Test/Model</exclude>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory>./src</directory>
+        </whitelist>
+        <blacklist>
+            <directory suffix=".php">./src/Setup/Controller/*</directory>
+        </blacklist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="./log/report" lowUpperBound="35"
+             highLowerBound="70"/>
+        <!--<log type="coverage-clover" target="./log/coverage.xml"/>-->
+        <!--<log type="coverage-php" target="./log/coverage.serialized"/>-->
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
+        <!--<log type="junit" target="./log/logfile.xml" logIncompleteSkipped="false"/>-->
+        <!--<log type="testdox-html" target="./log/testdox.html"/>-->
+        <!--<log type="testdox-text" target="./log/testdox.txt"/>-->
+    </logging>
+</phpunit>
