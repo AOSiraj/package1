@@ -1,1 +1,1 @@
-# Sample Zend Project
+# Sample Portable composer package
